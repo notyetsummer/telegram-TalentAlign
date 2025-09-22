@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос по культурам</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <header class="header">
+            <h1>🌍 Опрос по культурам</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Вопрос 1 из 40</div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Экран приветствия -->
+            <div class="screen" id="welcomeScreen">
+                <div class="welcome-content">
+                    <h2>Добро пожаловать!</h2>
+                    <p>Этот опрос поможет определить ваши культурные предпочтения.</p>
+                    <p>Вам предстоит ответить на 40 вопросов, выбрав оценку от 1 до 5.</p>
+                    <button class="btn btn-primary" id="startBtn">Начать опрос</button>
+                </div>
+            </div>
+
+            <!-- Экран вопроса -->
+            <div class="screen hidden" id="questionScreen">
+                <div class="question-content">
+                    <h3 class="question-title" id="questionTitle">Вопрос 1</h3>
+                    <p class="question-text" id="questionText">Текст вопроса будет здесь</p>
+                    
+                    <div class="rating-scale">
+                        <div class="scale-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="rating-buttons">
+                            <button class="rating-btn" data-rating="1">1</button>
+                            <button class="rating-btn" data-rating="2">2</button>
+                            <button class="rating-btn" data-rating="3">3</button>
+                            <button class="rating-btn" data-rating="4">4</button>
+                            <button class="rating-btn" data-rating="5">5</button>
+                        </div>
+                        <div class="scale-description">
+                            <span>Полностью не согласен</span>
+                            <span>Полностью согласен</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Экран результатов -->
+            <div class="screen hidden" id="resultsScreen">
+                <div class="results-content">
+                    <h2>🎉 Опрос завершен!</h2>
+                    <div class="results-grid" id="resultsGrid">
+                        <!-- Результаты будут здесь -->
+                    </div>
+                    <button class="btn btn-secondary" id="restartBtn">Пройти еще раз</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Навигация -->
+        <nav class="navigation hidden" id="navigation">
+            <button class="btn btn-outline" id="prevBtn">← Назад</button>
+            <button class="btn btn-primary" id="nextBtn">Далее →</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
